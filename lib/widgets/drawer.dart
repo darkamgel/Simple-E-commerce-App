@@ -28,7 +28,7 @@ class MyDrawer extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 accountEmail: Text(
-                  "briya66@gmail.com",
+                  "b_riya66@gmail.com",
                   style: TextStyle(color: Colors.white),
                 ),
                 // currentAccountPicture: Image.network(imageUrl),

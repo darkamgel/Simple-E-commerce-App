@@ -13,7 +13,9 @@ class HomeDetailsPage extends StatelessWidget {
     return SafeArea(
       bottom: false,
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         backgroundColor: MyTheme.creamColor,
         bottomNavigationBar: Container(
           color: Colors.white,
@@ -29,8 +31,8 @@ class HomeDetailsPage extends StatelessWidget {
                     backgroundColor:
                         MaterialStateProperty.all(MyTheme.DarkBluishColor),
                     shape: MaterialStateProperty.all(StadiumBorder())),
-                child: "Buy".text.make(),
-              ).wh(100, 50)
+                child: "Add to Cart".text.make(),
+              ).wh(120, 50)
             ],
           ).pOnly(right: 8.0).p32(),
         ),
@@ -56,6 +58,7 @@ class HomeDetailsPage extends StatelessWidget {
                           .make(),
                       catalog.desc.text.xl.make(),
                       10.heightBox,
+
                     ],
                   ).py64(),
                 ),

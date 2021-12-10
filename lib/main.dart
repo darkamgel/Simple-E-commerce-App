@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/cart_page.dart';
 import 'package:flutter_catalog/pages/homepage.dart';
 import 'package:flutter_catalog/pages/loginpage.dart';
 import 'package:flutter_catalog/utils/routes.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => Homepage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.cartRoute: (context) => CartPage(),
       },
     );
   }

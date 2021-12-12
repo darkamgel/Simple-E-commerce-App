@@ -4,10 +4,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 // import 'package:flutter_catalog/pages/home_widgets/catalog_list.dart';
-import 'package:flutter_catalog/widgets/drawer.dart';
+// import 'package:flutter_catalog/widgets/drawer.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
-import 'package:flutter_catalog/widgets/item_widgets.dart';
+// import 'package:flutter_catalog/widgets/item_widgets.dart';
 import 'package:flutter_catalog/widgets/themes.dart';
 import 'dart:convert';
 // import 'velocity_x';
@@ -55,11 +55,12 @@ class _HomepageState extends State<Homepage> {
     // final dummyList = List.generate(4, (index) => CatalogeModel.items[0]);
 
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
+      // backgroundColor: Theme.of(context).canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed:() => Navigator.pushNamed(context, MyRoutes.cartRoute) ,
-        child: Icon(CupertinoIcons.cart),
-        backgroundColor: MyTheme.DarkBluishColor,
+        child: Icon(CupertinoIcons.cart, color: Colors.white,),
+        backgroundColor: Theme.of(context).buttonColor,
         ),
       body: SafeArea(
         child: Container(

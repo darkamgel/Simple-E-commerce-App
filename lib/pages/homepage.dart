@@ -43,7 +43,7 @@ class _HomepageState extends State<Homepage> {
     // print(decodedData);
     var productsData = decodedData["products"];
     // print(productsData);
-    CatalogeModel.items = List.from(productsData)
+    CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
 
@@ -69,7 +69,7 @@ class _HomepageState extends State<Homepage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CatalogHeader(),
-              if (CatalogeModel.items != null && CatalogeModel.items.isNotEmpty)
+              if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                 CatalogList().py16().expand()
               else
                 CircularProgressIndicator().centered().py16(),
